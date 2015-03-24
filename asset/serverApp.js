@@ -41,7 +41,7 @@ function startServer(chainId) {
     fs.readFile(indexFile, 'utf8', function (err, str) {
       str = str.replace('@if (this.ViewBag.CanDebug == "true") {@Scripts.Render("~/gsncore")}', '')
       str = str.replace('@Gsn.Digital.Web.MvcApplication.ProxyMasterUrl', config.GsnApiUrl)
-      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.5');
+      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.6');
       str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion', new Date().getTime());
       str = str.replace(/\@this.ViewBag.CdnUrl/gi, '//cdn-staging.gsngrocers.com');
       str = str.replace('@this.ViewBag.FavIcon',  appPath  + '/' + chainId + '/images/favicon.ico');

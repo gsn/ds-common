@@ -7,7 +7,7 @@ var express = require('express'),
     url = require('url');
     
 var config = require('./config.json');
-var indexFile = path.resolve(__dirname + '/_Layout.cshtml');
+var indexFile = path.resolve(__dirname + '/Index.cshtml');
 var servicePath = path.resolve("..");
 var apps = {};
 var appPath = __dirname.replace(servicePath, '').replace(/\\+/gi, '/');
@@ -39,24 +39,12 @@ function startServer(chainId) {
       }
     }
     fs.readFile(indexFile, 'utf8', function (err, str) {
-      str = str.replace('@if (this.ViewBag.CanDebug == "true") {@Scripts.Render("~/gsncore")}', '')
       str = str.replace('@Gsn.Digital.Web.MvcApplication.ProxyMasterUrl', config.GsnApiUrl)
-      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.6');
+      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.10');
       str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion', new Date().getTime());
-      str = str.replace(/\@this.ViewBag.CdnUrl/gi, '//cdn-staging.gsngrocers.com');
-      str = str.replace('@this.ViewBag.FavIcon',  appPath  + '/' + chainId + '/images/favicon.ico');
       str = str.replace('@this.ViewBag.Title', chainId);
-      str = str.replace('@this.ViewBag.ChainId', chainId);
-      str = str.replace('@RenderSection("htmlhead", false)', '<link href="/asset/' + chainId + '/styles/app.css" rel="stylesheet" />');
-      str = str.replace('@RenderBody()', '<script>\n' +
-  '(function (globalConfig) {  try {\n' +
-  'globalConfig.data = { "ContentBaseUrl": "/asset/' + chainId + '", "Version": null, "ChainId": ' + chainId + ' };\n' +
-  '} catch (e) { }\n' +
-  '})(window.globalConfig || {});\n' +
-  '</script>\n' +                                                                                                           
-  '<script src="/asset/' + chainId + '/storeApp.js"></script>\n' +
-  '<script src="' + config.GsnApiUrl + '/store/siteconfig/' + chainId + '?callback=globalConfigCallback"></script>\n' 
-      );
+      str = str.replace(/\@this.ViewBag.CdnUrl/gi, config.CdnUrl);
+      str = str.replace(/\@this.ViewBag.ChainId/gi, chainId);
       response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       response.write(str);
       response.end();

@@ -43,6 +43,9 @@ function startServer(chainId) {
       str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.10');
       str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion', new Date().getTime());
       str = str.replace('@this.ViewBag.Title', chainId);
+      str = str.replace('@this.ViewBag.DataUrl', config.GsnApiUrl + '/store/sitecontentscript/' + chainId + '?nocache=' + new Date().getTime());
+      str = str.replace('@this.ViewBag.AppUrl', '/asset/' + chainId + '/storeApp.js?nocache=' + new Date().getTime());
+      str = str.replace('@this.ViewBag.AppCss', '/asset/' + chainId + '/styles/app.css?nocache=' + new Date().getTime());
       str = str.replace(/\@this.ViewBag.CdnUrl/gi, config.CdnUrl);
       str = str.replace(/\@this.ViewBag.ChainId/gi, chainId);
       response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });

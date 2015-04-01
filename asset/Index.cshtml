@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
@@ -10,12 +10,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-  <meta name="author" content="Grocery Shopping Network">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">                 
 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="author" content="Grocery Shopping Network">
   <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
-  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">
-  <link rel="shortcut icon" href="@this.ViewBag.FavIcon">
+  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">     
+
   <title>@this.ViewBag.Title</title>
   <!--[if lt IE 8]><meta http-equiv="refresh" content="5;URL=/unsupported-browser.html" /><![endif]-->
 
@@ -24,12 +28,12 @@
   <link href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- for circular imagemap -->    
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">                      
   <link href="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.2/css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">   
-  <link href="@this.ViewBag.CdnUrl/script/lib/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
-  <script>var globalConfig = { data: {}, apiUrl: '@Gsn.Digital.Web.MvcApplication.ProxyMasterUrl' }; function globalConfigCallback(data) { if (!globalConfig.data) globalConfig.data = {}; for (var k in data) globalConfig.data[k] = data[k]; }</script>
+  <link href="@this.ViewBag.CdnUrl/script/lib/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">        
+  <link href="@this.ViewBag.AppCss" rel="stylesheet" type="text/css">  
+  <script>var globalConfig = { data: {}, apiUrl: '@Gsn.Digital.Web.MvcApplication.ProxyMasterUrl' };</script>
   <!--[if lt IE 10]>
     <script src="@this.ViewBag.CdnUrl/script/lib/proxy/xdomain.min.js" data-slave="@this.ViewBag.CdnUrl/script/lib/proxy/proxy.html"></script>  
-  <![endif]-->                                         
-  @RenderSection("htmlhead", false)<!--endhead-->
+  <![endif]--><!--endhead-->
 </head>
 <body data-ctrl-body="" data-ng-class="{ 'isLoggedIn': isLoggedIn, 'app-ready': (appState == 'ready' )}">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
@@ -45,8 +49,11 @@
   <!-- the main container -->
   <div class="layout-container" data-ng-include="currentLayout"></div>    
   <a class="back-to-top" data-ng-scroll-top="scrollTop" data-offset="50"><i class="fa fa-chevron-up"></i><br />Top</a>                           
-  <div class="hidden" data-gsn-path-pixel="https://secure.adnxs.com/getuid?https://dataapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>  
-              
+  <div class="hidden" data-gsn-path-pixel="https://secure.adnxs.com/getuid?https://dataapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+                                                                                                    
+  <!-- Unfortunately, this cannot be injected as Coupons, Inc. required this to be inside the html before document load.  Plugin permission issue. -->
+  <div class="hidden"><iframe id="ci_ic1" name="ci_ic1" height="0" width="0" style="position: absolute; top: -9999em; left: -9999em; width: 0px; height: 0px; border: 0; z-index: 99;"></iframe></div>
+
   <!-- above the fold scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->  
@@ -54,10 +61,12 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.2/js/jquery.blueimp-gallery.min.js"></script><!-- for image gallery popup -->    
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>                                                     
-  <script data-gsnid="@this.ViewBag.ChainId" data-api="https://clientapix.gsn2.com/api/v1" src="@this.ViewBag.CdnUrl/script/gsncore/gsndfp.min.js" ></script>  
-  <script src="@this.ViewBag.CdnUrl/script/gsncore/@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")/gsncore.min.js"></script>    
+  <script data-gsnid="@this.ViewBag.ChainId" src="@this.ViewBag.CdnUrl/script/gsndfp/gsndfp.min.js"></script>  
+  <script src="@this.ViewBag.CdnUrl/script/gsncore/@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")/gsncore.min.js"></script>       
 
-  @RenderBody()                                           
+  <!-- begin content -->             
+  <script src="@this.ViewBag.DataUrl"></script>
+  <script src="@this.ViewBag.AppUrl"></script>                                           
                                                                        
   <!-- polyfills: html5, es5, and json -->                  
   <!--[if lt IE 10]>

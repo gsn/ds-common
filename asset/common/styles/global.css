@@ -122,6 +122,8 @@ legend
   color: #000;
 }
 
+.body-gmodal { overflow: hidden !important; }
+
 .gmodal {
   background: url("data:image/gif;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNg2AQAALUAs0e+XlcAAAAASUVORK5CYII=");
 }

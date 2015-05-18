@@ -40,7 +40,7 @@ function startServer(chainId) {
     }
     fs.readFile(indexFile, 'utf8', function (err, str) {
       str = str.replace('@Gsn.Digital.Web.MvcApplication.ProxyMasterUrl', config.GsnApiUrl)
-      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.10');
+      str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion.Replace("_", ".")', '1.4.13');
       str = str.replace('@Gsn.Digital.Web.MvcApplication.AppVersion', new Date().getTime());
       str = str.replace('@this.ViewBag.Title', chainId);
       str = str.replace('@this.ViewBag.DataUrl', config.GsnApiUrl + '/store/sitecontentscript/' + chainId + '?nocache=' + new Date().getTime());

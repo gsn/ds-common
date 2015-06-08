@@ -179,7 +179,7 @@ legend
 
 /* hover menu on big screen only */
 @media (min-width: 979px) {
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
+  ul.nav-hover li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
 }
@@ -187,9 +187,11 @@ legend
 .stuck.stuck-collapsed {
   margin-bottom: -80px;
 }
+
 .stuck-collapser {
   display: none;
 }
+
 .stuck .stuck-collapser {
   cursor: pointer; 
   right: -20px; 

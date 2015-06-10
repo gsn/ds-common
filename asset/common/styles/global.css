@@ -142,6 +142,10 @@ legend
   display:table !important;
 }   
 
+.logo {
+  max-width: 100%;
+}
+
 /* logo responsive */
 @media(max-width: 767px){
   .logo {

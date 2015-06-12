@@ -299,6 +299,10 @@ legend
   }
 }
 
+.layout-container {
+  overflow-x: hidden;
+}
+
 .mainContent {
   background: #fff;
   color: #000;

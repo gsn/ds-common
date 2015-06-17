@@ -203,8 +203,8 @@ legend
 }
 
 .stuck .stuck-collapser {
-  right: 15px; 
-  top: 15px; 
+  right: 5px; 
+  top: 5px; 
   cursor: pointer; 
   background-color: #ccc; 
   width: 30px; 
@@ -213,6 +213,7 @@ legend
   text-align: center; 
   line-height: 30px;
   display: block;
+  cursor: pointer;
 }
 
 .dcircular-popup {

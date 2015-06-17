@@ -195,7 +195,7 @@ legend
 }
 
 .stuck.stuck-collapsed {
-  margin-bottom: -80px;
+  display: none;
 }
 
 .stuck-collapser {
@@ -203,8 +203,8 @@ legend
 }
 
 .stuck .stuck-collapser {
-  right: -20px; 
-  top: -20px; 
+  right: 15px; 
+  top: 15px; 
   cursor: pointer; 
   background-color: #ccc; 
   width: 30px; 

@@ -319,14 +319,9 @@ footer {
   padding-top: 5px;
 }
 
-.generic-content, .login-menu a, .login-menu a:hover, .login-menu a:focus, 
- .mylist-menu a, .mylist-menu a:hover, .mylist-menu a:focus {
-  color: #000 !important;
-}
-
 .generic-content, .generic-content > *,
- .generic-content > a, .generic-content > a:hover, .generic-content > a:active {
-  background-color: #fff !impotant;
+ .generic-content a, .generic-content a:hover, .generic-content a:active {
+  background-color: #fff !important;
   color: #000 !important;
 }
 

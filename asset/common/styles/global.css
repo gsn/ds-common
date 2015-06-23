@@ -77,14 +77,14 @@ legend
 .back-to-top {
   position: fixed;
   bottom: 2em;
-  right: 0px;
+  right: 15px;
   text-decoration: none;
   color: #000000;
   background-color: rgba(235, 235, 235, 0.80);
   font-size: 12px;
   padding: 1em;
   display: none;
-  z-index: 10;
+  z-index: 20;
   text-align: center;
   text-transform: lowercase;
 }

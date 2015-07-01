@@ -315,7 +315,6 @@ footer {
 
 .generic-content, .generic-content > *,
  .generic-content a, .generic-content a:hover, .generic-content a:active {
-  background-color: #fff !important;
   color: #000 !important;
 }
 

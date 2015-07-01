@@ -235,6 +235,7 @@ legend
 
 .my-navbar {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .slide-container img {
@@ -301,7 +302,7 @@ legend
 }
 
 .mainContent {
-  background: #fff;
+  background-color: #fff;
   color: #000;
   padding-bottom: 15px;
 }
@@ -315,7 +316,6 @@ footer {
 
 .generic-content, .generic-content > *,
  .generic-content a, .generic-content a:hover, .generic-content a:active {
-  background-color: #fff !important;
   color: #000 !important;
 }
 

@@ -149,7 +149,7 @@ legend
 /* logo responsive */
 @media(max-width: 767px){
   .logo {
-    height: 50px;
+    height: 70px;
   }
 }
 

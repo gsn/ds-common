@@ -376,6 +376,14 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 767px){
+  .social-icons .fa {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
 .social-icons.icon-circle .fa{ 
   border-radius: 50%;
 }

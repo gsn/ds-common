@@ -149,7 +149,7 @@ legend
 /* logo responsive */
 @media(max-width: 767px){
   .logo {
-    height: 50px;
+    height: 70px;
   }
 }
 
@@ -203,7 +203,6 @@ legend
 }
 
 .stuck .stuck-collapser {
-  right: 5px; 
   top: 5px; 
   cursor: pointer; 
   background-color: #ccc; 
@@ -375,6 +374,14 @@ footer {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px){
+  .social-icons .fa {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
 
 .social-icons.icon-circle .fa{ 

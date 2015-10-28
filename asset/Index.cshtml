@@ -48,8 +48,9 @@
 
   <!-- the main container -->
   <div class="layout-container" data-ng-include="currentLayout"></div>    
-  <a class="back-to-top" data-ng-scroll-top="scrollTop" data-offset="50"><i class="fa fa-chevron-up"></i><br />Top</a>                           
-  <div class="hidden" data-gsn-path-pixel="https://secure.adnxs.com/getuid?https://dataapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+  <a class="back-to-top" data-ng-scroll-top="scrollTop" data-offset="50"><i class="fa fa-chevron-up"></i><br />Top</a>      
+                     
+  <div class="hidden" data-gsn-path-pixel="http://ib.adnxs.com/seg?add=3623329&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
                                                                                                     
   <!-- Unfortunately, this cannot be injected as Coupons, Inc. required this to be inside the html before document load.  Plugin permission issue. -->
   <div class="hidden"><iframe id="ci_ic1" name="ci_ic1" height="0" width="0" style="position: absolute; top: -9999em; left: -9999em; width: 0px; height: 0px; border: 0; z-index: 99;"></iframe></div>

@@ -293,8 +293,10 @@ legend
   background-color: #f8f8f8;
 }
 
-.featuredhome > a > i {
+.featuredhome > a > i.fa {
   font-size: 7em;
+  text-align: center;
+  width: 1.44em;
 }
 
 @media(min-width:768px) and (max-width:991px) {

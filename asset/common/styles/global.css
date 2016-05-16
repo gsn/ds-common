@@ -521,3 +521,53 @@ footer {
         display: none !important;
     }
 }
+
+.sharing-menu:hover {
+  left: -40px;
+}
+
+.sharing-menu {
+    top: 60px; 
+    left: -85px; 
+    position: fixed;
+    z-index: 77;
+    transition: all 0.2s ease-in-out;
+}
+
+.sharing-menu ul {
+    overflow: auto;
+}
+
+.sharing-menu ul li {
+    list-style-type: none;
+}
+
+.sharing-menu ul li a i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.sharing-menu .fa-facebook {
+    background: #3b5998;
+}
+
+.sharing-menu .fa-pinterest {
+    background: #c92228;
+}
+
+.sharing-menu .fa-twitter {
+    background: #00aced;
+}
+
+.sharing-menu .fa-google-plus {
+    background: #dd4b39;
+}
+
+.popout-menu ul li a i:hover {
+    opacity: .7;
+}

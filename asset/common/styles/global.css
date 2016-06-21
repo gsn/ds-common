@@ -358,6 +358,7 @@ footer {
   }
 }
 
+/*
 @media only screen and (min-width: 1200px){
   .main-container, .header-bar {
     width: 1170px;
@@ -370,6 +371,7 @@ footer {
     margin-left: -120px;
   }
 }
+*/
 
 .social-icons {
   margin-bottom: 0px;

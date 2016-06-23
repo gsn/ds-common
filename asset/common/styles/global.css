@@ -332,6 +332,12 @@ footer {
   padding-bottom: 15px;
 }
 
+.right-pods {
+  margin-left: -40px;
+  bottom: auto;
+  top: auto;
+}
+
 @media only screen and (max-width: 940px){
   .main-container, .header-bar {
     width: 100%;
@@ -352,7 +358,6 @@ footer {
   }
 }
 
-/* uncomment these to support higher width
 @media only screen and (min-width: 1200px){
   .main-container, .header-bar {
     width: 1170px;
@@ -361,8 +366,10 @@ footer {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  .right-pods {
+    margin-left: -120px;
+  }
 }
-*/
 
 .social-icons {
   margin-bottom: 0px;

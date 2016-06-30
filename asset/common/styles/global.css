@@ -367,7 +367,7 @@ footer {
     margin-right: 0 !important;
   }
   .right-pods {
-    margin-left: -120px;
+    margin-left: auto !important;
   }
 }
 

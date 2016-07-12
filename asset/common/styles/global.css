@@ -595,7 +595,7 @@ footer {
     opacity: .7;
 }
 
-.productImagePopOver, img {
+.productImagePopOver img {
     max-width: 200px;
     max-height: 200px;
 }

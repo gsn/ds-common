@@ -594,3 +594,8 @@ footer {
 .popout-menu ul li a i:hover {
     opacity: .7;
 }
+
+.productImagePopOver, img {
+    max-width: 200px;
+    max-height: 200px;
+}

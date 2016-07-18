@@ -228,7 +228,8 @@ legend
 }
 
 .gsn-popover img {
-  width: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .my-navbar {
@@ -332,10 +333,12 @@ footer {
   padding-bottom: 15px;
 }
 
-.right-pods {
-  margin-left: -40px;
-  bottom: auto;
-  top: auto;
+@media only screen and (min-width: 767px){
+  .right-pods {
+    margin-left: -40px;
+    bottom: auto;
+    top: auto;
+  }
 }
 
 @media only screen and (max-width: 940px){
@@ -365,9 +368,6 @@ footer {
   .navbar-header {
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
-  .right-pods {
-    margin-left: -120px;
   }
 }
 

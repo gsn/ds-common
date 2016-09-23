@@ -595,3 +595,4 @@ footer {
 .popout-menu ul li a i:hover {
     opacity: .7;
 }
+.gsn-popover{box-shadow:2px 3px 6px #6D6D6E;border:1px solid #ccc;border-radius:5px;}

@@ -595,4 +595,18 @@ footer {
 .popout-menu ul li a i:hover {
     opacity: .7;
 }
-.gsn-popover{box-shadow:2px 3px 6px #6D6D6E;border:1px solid #ccc;border-radius:5px;}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    border-top: 2px solid rgba(119, 119, 119, 0.2);
+    margin: 0;
+    padding-top: 5px;
+}
+.SalePrice {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.SavingsAmount {
+    font-weight: bold;
+}

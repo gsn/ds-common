@@ -595,8 +595,3 @@ footer {
 .popout-menu ul li a i:hover {
     opacity: .7;
 }
-
-/* temp hide receive postal mail */
-label[for="receivepostalmail"] {
-   display: none;
-}

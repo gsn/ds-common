@@ -1,5 +1,5 @@
 {
-  "GsnApiUrl": "http://clientapix.gsn2.com/api/v1",
+  "GsnApiUrl": "https://clientapix.brickinc.net/api/v1",
   "ContentBaseUrl": "",
-  "CdnUrl": "http://cdn-staging.gsngrocers.com"
+  "CdnUrl": "https://cdn-stg.brickinc.net"
 }

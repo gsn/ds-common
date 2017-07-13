@@ -558,6 +558,12 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
+@media only screen and (min-width: 767px){
+  .sharing-menu {
+    top: 120px;
+  }
+}
+
 .sharing-menu ul {
     overflow: auto;
 }
@@ -568,12 +574,13 @@ footer {
 
 .sharing-menu ul li a i {
     color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 20px;
     font-size: 25px;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 12%;
+    margin-top: 5px;
 }
 
 .sharing-menu .fa-facebook {

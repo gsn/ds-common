@@ -551,7 +551,7 @@ footer {
 }
 
 .sharing-menu {
-    top: 60px; 
+    /*top: 60px; */
     left: -85px; 
     position: fixed;
     z-index: 77;
@@ -560,7 +560,7 @@ footer {
 
 @media only screen and (min-width: 767px){
   .sharing-menu {
-    top: 120px;
+    /*top: 120px;*/
   }
 }
 

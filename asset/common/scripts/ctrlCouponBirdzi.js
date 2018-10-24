@@ -80,6 +80,10 @@
         list.items = instoreCoupons.items;
       } else {
         // loading jsonp coupon
+        if ($scope.coupons.birdzi.items.length > 0) {
+          return;
+        }
+
         $.ajax({
             url: 'https://zip.brickinc.net/coupons.php?cid=3604',
             dataType: 'jsonp',
@@ -96,10 +100,12 @@
                 item.Description1 = item.description;
                 item.Description2 = item.rules;
                 item.ImageUrl = item.detailmediapath;
+                item.IsTargeted = false;
               });
 
               $scope.coupons.birdzi.items = data;
-              list.items = data;
+              $scope.preSelectedCoupons.items = data;
+              $timeout($scope.loadMore, 500);
             }
         });
       }

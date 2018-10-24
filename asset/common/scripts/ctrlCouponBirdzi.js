@@ -81,6 +81,7 @@
       } else {
         // loading jsonp coupon
         if ($scope.coupons.birdzi.items.length > 0) {
+            $scope.preSelectedCoupons.items = $scope.coupons.birdzi.items;
           return;
         }
 
@@ -104,7 +105,7 @@
               });
 
               $scope.coupons.birdzi.items = data;
-              $scope.preSelectedCoupons.items = data;
+              $scope.preSelectedCoupons.items = $scope.coupons.birdzi.items;
               $timeout($scope.loadMore, 500);
             }
         });
